@@ -64,7 +64,54 @@ class BinarySearchTree {
     }
     console.log(set);
   }
-  // remove
+  remove(value) {
+    let trav = this.root;
+    let head = trav;
+    while(trav.value !== value) {
+      if(value > trav.value) {
+        if(trav.right !== null) {
+          head = trav;
+          trav = trav.right;
+        } else {
+          return false;
+        }
+      } else {
+        if(trav.left !== null) {
+          head = trav;
+          trav = trav.left;
+        } else {
+          return false;
+        }
+      }
+    }
+    //console.log("trav", trav, "head", head);
+    if(trav.left === null && trav.right === null) {
+      head.right = null;
+    } else {
+      let tLeft;
+      if(trav.left !== null) {
+        tLeft = trav.left;
+      }
+      if(trav.right !== null) {
+        let tRight = trav.right;
+        let tRightLeft = tRight.left;
+        while(tRightLeft.left !== null) {
+          tRightLeft = tRightLeft.left;
+        }
+        // console.log("head", head);
+        // console.log("trav", trav);
+        // console.log("tRight", tRight);
+        // console.log("tRightLeft", tRightLeft);
+        // console.log("tLeft", tLeft);
+        head.right = tRightLeft;
+        tRightLeft.right = tRight;
+        tRightLeft.left = tLeft;
+      } else {
+        head.right = trav.left;
+      }
+    }
+    return this;
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -72,11 +119,17 @@ tree.insert(9)
 tree.insert(4)
 tree.insert(6)
 tree.insert(20)
-tree.insert(170)
+tree.insert(90)
 tree.insert(15)
 tree.insert(1)
-JSON.stringify(traverse(tree.root))
-tree.lookup(9);
+tree.insert(85)
+tree.insert(82)
+tree.insert(95)
+//JSON.stringify(traverse(tree.root))
+//tree.lookup(9);
+tree.remove(20);
+console.log(tree);
+// JSON.stringify(traverse(tree.root))
 
 //     9
 //  4     20
