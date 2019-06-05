@@ -128,7 +128,7 @@ Merge Sort [Best: O(nlog(n)), Worst:O(nlog(n))] - Divide each element and do com
 Quick Sort - refer doc, take piveot last and take first adn compare, if first is more then pivot switch places and change pivot to first, now start scan from lastand come forward
 Heap Sort - https://www.youtube.com/watch?v=HqPJF2L5h9U - Create a complete binary tree and insert the dat so that it remains complete binary and then swap with parent if the element is greater (max heap case), delete the data from the top head and bring the last element of the complete binary tree and then swap traverssing child so that max element comes to top.
 While deleting the top element we get the output as sorted array
-Radix Sort - This works only on numbers, take the largest from the numbers (for say 105), and make all the other numbers padding 0 in fron to be equal to 3 digits as max number 105, now start comapring from last digit and add them in buckets with 0 to 9, and then pull out them from bottom, same with 2nd place and 1st place and same procedure, in last remove extra padded 0's to see sorted list
+Radix Sort - This works only on numbers, take the largest from the numbers (for say 105), and make all the other numbers padding 0 in fron to be equal to 3 digits as max number 105, now start comapring from last digit and add them in buckets with 0 to 9, and then pull out them from bottom, same with 2nd place and 1st place and same procedure, in last remove extra padded 0's to see sorted list - https://www.youtube.com/watch?v=YXFI4osELGU
 
 99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0
 
