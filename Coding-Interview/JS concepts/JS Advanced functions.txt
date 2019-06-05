@@ -20,3 +20,7 @@ const arr2 = ['m', 'n', 'x', 'y', 'r'];
 5. str.split('').reverse() - this function reverses the split string array
 
 6. str.split('').reverse().join(''); - this function joins the reversed split str array
+
+
+
+
