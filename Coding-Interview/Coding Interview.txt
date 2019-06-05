@@ -1,0 +1,164 @@
+Front-end:
+- Angular 2, 4, 5, 6
+- React.js
+- Material Design
+- Bootstrap
+
+Back-end:
+- Node.js
+- Express
+- GraphQL
+- Firebase
+
+Database:
+- MongoDB
+- MySQL
+- Firebase / Firestore
+
+Unit Testing:
+- Jest
+- Jasmine
+
+Source Control / CI:
+- Git
+- GitHub / GitLab / BitBucket
+- CircleCI
+- Travis CI
+
+Deployment:
+- AWS (Amazon Web Services)
+- GCP (Google Cloud Platform)
+- Heroku
+- DigitalOcean
+
+https://coggle.it/diagram/W5u8QkZs6r4sZM3J/t/master-the-interview
+https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link/c25f98c73a03f5b1107cd0e2f4bce29c9d78e31655e55cb0b785d56f0036c9d1
+
+https://github.com/aneagoie/resume-checklist
+https://www.resumemaker.online/
+https://www.jobscan.co
+https://www.cakeresume.com/Engineering-resume-samples
+https://thisresumedoesnotexist.com/
+
+Resume Cheat Sheet
+✅ Use a pre-designed resume template
+✅ Make the resume fit on 1 page
+✅ Include words from job description
+✅ Include company name you are applying to
+✅ Does your first item on your resume reflect what they are looking for?
+✅ Experience titles demonstrate value
+✅ Do you have an online link?
+✅ Remove the word “I”
+✅ No buzzwords describing how great you are
+✅ Are you using Action words?
+✅ Measure everything in terms of impact, don’t just describe your responsibilities
+✅ Technical Knowledge/Skills should include what they are looking for. Only show years if it is impressive
+✅ Include only sections/items that are impressive: Experience, Projects, Education, Technical Skills
+✅ No typos or bad grammar
+
+https://github.com/aneagoie/gitfiti
+
+https://zero-to-mastery.github.io/ZtM-Job-Board/
+
+If you are looking for a quick and efficient way of building a portfolio page, I recommend these free templates:
+https://cruip.com/ (This is my favourite)
+http://www.mashup-template.com/templates.html
+https://mdbootstrap.com/freebies/
+https://www.creative-tim.com/bootstrap-themes/ui-kit?direction=asc&sort=price
+https://medium.freecodecamp.org/15-web-developer-portfolios-to-inspire-you-137fb1743cae
+
+Resources(Email)
+https://chrome.google.com/webstore/detail/hunter/hgmhmanijnjhaffoampdlllchpolkdnj?hl=en
+https://chrome.google.com/webstore/detail/find-anyones-email-contac/jjdemeiffadmmjhkbbpglgnlgeafomjo?hl=en
+https://chrome.google.com/webstore/detail/email-extractor/jdianbbpnakhcmfkcckaboohfgnngfcc?hl=en
+
+Resources: Where To Find Jobs?
+https://news.ycombinator.com/item?id=17902901
+https://angel.co/jobs
+
+Remote Jobs
+https://designmodo.com/jobs/
+https://www.remotelist.pw/
+https://remoteonly.io/
+https://weworkremotely.com/
+https://remoteok.io/
+
+Others
+https://hired.com/
+https://triplebyte.com/
+https://whitetruffle.com/
+https://www.ziprecruiter.com/
+https://www.meetup.com/
+
+
+
+Big(O) rules - 
+1. Worst Case - If we have O(1) as best case and O(n) as worst case, then our O(n) is the answer
+2. Remove constants - If we have O(4+5n), then constants are removed and answer is O(n)
+3. Different Terms for Inputs - 
+		a. If we have two inputs t function function(m, n) and there are two different loops on both m and n, then it is O(n+m)
+		b. If we have two loops, one nested in another then it becomes O(n*n) or O(n^2)
+4. Drop Non Dominants - If we have something like O(x^2+3x+100+x/2), then we drop the non dominants and it becomes O(x^2)
+
+http://bigocheatsheet.com/
+
+
+Types of data structures - https://en.wikipedia.org/wiki/List_of_data_structures
+Memory management - http://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html
+Registers and RAM - https://www.youtube.com/watch?v=fpnE6UAfbtU
+Var vs Let vs Const - https://dev.to/sethusenthil/var-vs-let-vs-const-1cgc
+Hash Visualization - https://www.cs.usfca.edu/~galles/visualization/OpenHash.html
+Visuo linked list - https://visualgo.net/en/list
+Arrays vs LinkedList - https://www.youtube.com/watch?v=DyG9S9nAlUM
+O(log(n)) - https://www.youtube.com/watch?v=M4ubFru2O80
+
+Binary Search tree iteration / avl tree - https://visualgo.net/bn/bst - explanation - 
+red black tree - https://www.cs.usfca.edu/~galles/visualization/RedBlack.html - explanation - https://medium.com/basecs/painting-nodes-black-with-red-black-trees-60eacb2be9a5
+heap tree - https://visualgo.net/en/heap - explanation - parents are always greater then child nodes
+Priority Queue - Nodes are added top to bottom and left to right, but if someone comes with higher priority, then lower priority one is shifted down
+Trie - Each name is stored in a tree data structure, top to bottom
+
+Sorting algo visual - https://www.toptal.com/developers/sorting-algorithms
+Sorting algo dance - https://www.youtube.com/watch?v=ywWBy6J5gz8
+
+Bubble Sort [Best: O(N), Worst:O(N^2)] - (compare side by side and keep shifting) Starting on the left, compare adjacent items and keep “bubbling” the larger one to the right (it’s in its final place). Bubble sort the remaining N -1 items.
+Selection Sort [Best/Worst: O(N^2)] - (scan for the smallest and replace at 1st item) Scan all items and find the smallest. Swap it into position as the first item. Repeat the selection sort on the remaining N-1 items.
+Insertion Sort [Best: O(N), Worst:O(N^2)] - Start with a sorted list of 1 element on the left, and N-1 unsorted items on the right. Take the first unsorted item (element #2) and insert it into the sorted list, moving elements as necessary. We now have a sorted list of size 2, and N -2 unsorted elements. Repeat for all elements.
+Merge Sort [Best: O(nlog(n)), Worst:O(nlog(n))] - Divide each element and do comparision and keep combining
+Quick Sort - refer doc, take piveot last and take first adn compare, if first is more then pivot switch places and change pivot to first, now start scan from lastand come forward
+Heap Sort - https://www.youtube.com/watch?v=HqPJF2L5h9U - Create a complete binary tree and insert the dat so that it remains complete binary and then swap with parent if the element is greater (max heap case), delete the data from the top head and bring the last element of the complete binary tree and then swap traverssing child so that max element comes to top.
+While deleting the top element we get the output as sorted array
+Radix Sort - This works only on numbers, take the largest from the numbers (for say 105), and make all the other numbers padding 0 in fron to be equal to 3 digits as max number 105, now start comapring from last digit and add them in buckets with 0 to 9, and then pull out them from bottom, same with 2nd place and 1st place and same procedure, in last remove extra padded 0's to see sorted list
+
+99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0
+
+
+===============JS functions================
+
+str.split('') - this functions splits the string in the form of array
+str.split('').reverse() - this function reverses the split string array
+str.split('').reverse().join(''); - this function joins the reversed split str array
+
+
+==========Binary Trees=================
+
+1. Perfect Binary Tree - All filled in, a node either have 0 child or no child
+2. Full Binary Tree - A node will have 0 or 2 child only.
+3. Binary Search tree - Go left number decreases, go right number increases
+
+========LeetCode================
+
+------Array-------
+https://leetcode.com/problems/maximum-subarray/description/
+https://leetcode.com/problems/move-zeroes/description/  --done
+https://leetcode.com/problems/contains-duplicate/description/  --done
+https://leetcode.com/problems/rotate-array/description/  --done
+https://www.coderbyte.com/language/Longest%20Word - regex  --done
+
+==========Red Black Tree Rules=================
+
+1. every node is red or black,
+2. the root node is black,
+3. no two red nodes appear consecutively,
+4. the path from the root node to all four null leaf nodes passes through two black nodes (either 2 and then 1, or 2 and then 3) on the way to the null leaves.
+
