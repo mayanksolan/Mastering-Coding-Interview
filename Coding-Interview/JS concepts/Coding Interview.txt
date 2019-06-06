@@ -154,6 +154,12 @@ Binary Search - Array is sorted, so start from middle and check if number is hig
 BFS - More memory, Shortest path, closer nodes
 DFS - Less memory, Does path exist, Can get Slow -https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr
 
+BFS and SFS do not consoider weightage edges in a graph, so this one (example google maps shortest path with weight aka traffic)
+Dijkstra - shortest path, does not accomodate negative weight (bit faster) O(n^2) - https://www.youtube.com/watch?v=XB4MIexjvY0
+Bellman - shortest path, it accomodate negative weight (bit slower) O(n^2) - https://www.youtube.com/watch?v=FtN3BYH2Zes
+
+Memoization - 
+
 
 ===============JS functions================
 
