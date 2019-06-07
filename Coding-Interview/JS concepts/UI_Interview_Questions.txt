@@ -1,0 +1,203 @@
+Angular 4:
+
+ 
+
+Architecture of Angular 4 application.
+
+Explain the flow of Angular application from the start of application till the View is loaded in the DOM.(OR How does Angular application bootsraps)
+
+Lifecycle hook in Angular
+
+Router configuration
+
+Can activate for AUTH guard
+
+What are AUTH guard
+
+What is authentication and authorization in Angular 4 and how to achieve it. (can be achieved using AUTH guard)
+
+Pipes in Angular
+
+Custom pipes
+
+HttpClientModule explain
+
+How to request data from rest endpoint using write get, post, put, delete, patch (with example/syntax)
+
+Template forms and Reactive forms in Angular (with example)
+
+Types of directives : component, attribute and structural
+
+Dependency injection
+
+Why do we put * infront of structural directives. (*ngFor *ngIf)
+
+Injectors in Angular
+
+Structure of app.module.ts file in angular. (imports, modules, declatrions, providers/ write it on paper)
+
+Data transfer between 2 components
+
+Parent child relationship : @input and @output
+
+Observables and promises / difference between observalble and promises.
+
+what is promise and what soes it do.
+
+How to see if promise is success or fail. (Ans : using .then or .catch)
+
+what is obeservable.
+
+What is Redux in Angular and how to use it.
+
+What are components.what is the use of package.json
+
+What is the use of Node.js in Angular application.
+
+How to make a component in Angular which has outer body constant and can change inner HTML body content on every use of view ? Explain (header and footer is constant and whatever HTML content we pass should be shown in the body) Ans : using content-view in Angular
+
+How to maintain the data which is used by many components. How to make sure that components use updated data when various componets can operate on same data (Ans: using Redux. The data is stored in redux store)
+
+Explain the building blocks of Redux in angular (3 blocks : Store, Action and reducers)
+
+how to maintain the data when it is shared by two componets. (using service)
+
+what are services in Angular and ow are they used.
+
+what does ngHide ,ngShow and ngIf do?
+
+what is componet directive in ANgular.
+
+ 
+
+ 
+
+ 
+
+JavaScript:
+
+ 
+
+Is JavaScript object oriented ? why ?
+
+Why typescript over JavaScript ?
+
+JavaScript ES6 features : arrow function, template literal with backtick ( ` ), spread operator, classes , inheritance , Generators.
+
+How to create object in  JavaScript (normal/vanilla JavaScript)
+
+How to make sure that only one instance of class is created (singleton) . write code with example.
+
+How to create private method in Javascript with help of code (normal javascript) : Ans - using closure in javascript
+
+Difference between let and var in javascriptwhat is closure with help of example in javascript.
+
+what is execution context in javascript.
+
+what is hoisting in Javascript with example.                                     
+
+what happens when you put a URL in browser and hit enter (explain whole process from sending request to getting response in the browser )
+
+whatr is callback in Javascrippt .Example.
+
+write a function body for function which looks like this  sum(3)(5), it returns sum of 3+5.
+
+Ans : using call back. since we can return fucntion injavascript
+
+ 
+
+/*function start*/
+
+function sum(one){
+
+              return function cal(two){
+
+                             return one+two;
+
+              }
+
+} /*function end*/
+
+ 
+
+How to create private method in Javascript with help of code (normal javascript) : Ans - using closure in javascript
+
+Difference between let and var in javascript
+
+what is closure with help of example in javascript.
+
+what is execution context in javascript.
+
+what is hoisting in Javascript with example.
+
+ 
+
+ 
+
+Bootstrap, HTML and css:
+
+ 
+
+What is bootstrap.
+
+Box model in css
+
+What is structural css (scss)
+
+What is semantic way of coding in HTML
+
+Difference between single page application and multi page application.
+
+What is better single page or multi page application.
+
+There are 1000 records in the unordered list in DOM and we have to call a function on click of each list. Where will you place the function of click event ?
+
+(Ans:  in the 'ul' and not in each 'li' coz if we keep it in 'li' we will have to write 100 function calls. putting fucntion call in 'ul' helps since all the child events are propogated to parent incase child does not handle the event. )
+
+what is selector for ID in css (ans : #)
+
+what is selector for class in css (ans : . (dot))
+
+How does bootrap work and how does it help in responsive design.
+
+What is precidence of css in styles. (inline has higest presidence, then internal and then external)
+
+whenever we mention a css style in html, where does the complier first search for style. (inline or else in the StylesURL in component)
+
+New features in HTML5.
+
+ 
+
+Algorithms and Datastructures:
+
+Lists
+
+sets
+
+arrays
+
+strings
+
+reverse array witout using extra memory.
+
+How to eliminate duplicate elemets in array. (ANS : convert array to SET)
+
+Most optimize way to find the middle elemet of array wihout using any extra memory.
+
+Most optimize way to find middle elemet of single linked list without using extra memory.
+
+Most optimized way to find the peak of Bitonic array.
+
+Given two single linked list in ascending fashion, merge both the arrays and sort them in decreasing order without using extra memory.
+
+ 
+
+ 
+
+Programs:
+
+Few javascript programs.
+
+Program to write custome pipe in Angular.
+
+Any short program in Angular 4. Eg. Calling rest api and display username in a list. On click of username in list user details should be shown on the right side.

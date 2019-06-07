@@ -183,6 +183,11 @@ https://leetcode.com/problems/contains-duplicate/description/  --done
 https://leetcode.com/problems/rotate-array/description/  --done
 https://www.coderbyte.com/language/Longest%20Word - regex  --done
 
+------Dynamic Programming-----------
+https://leetcode.com/problems/house-robber
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock
+https://leetcode.com/problems/climbing-stairs
+
 ==========Red Black Tree Rules=================
 
 1. every node is red or black,
@@ -190,3 +195,16 @@ https://www.coderbyte.com/language/Longest%20Word - regex  --done
 3. no two red nodes appear consecutively,
 4. the path from the root node to all four null leaf nodes passes through two black nodes (either 2 and then 1, or 2 and then 3) on the way to the null leaves.
 
+
+------------Stories------------
+1. Technical
+2. Success
+3. Leadership
+4. Challenge
+5. Tell Me About Yourself - discord - #job-hunting
+6. Why Us
+7. Why are you leaving your current company
+8. Tell me about problem + how you solved it
+9. Tell me about an interesting project
+10. What is you biggest weakness
+11. Any questions for me
