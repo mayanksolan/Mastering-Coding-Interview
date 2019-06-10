@@ -21,6 +21,26 @@ const arr2 = ['m', 'n', 'x', 'y', 'r'];
 
 6. str.split('').reverse().join(''); - this function joins the reversed split str array
 
+7. Javascript - let, const, var
+	let does not allow you to declare a variable twice, although var does allow
+	"use strict" is used to specify at the top of the code so that a person mistakenly do not declare a variable twice
+	var if declared globally and if value changes inside a function locally then the value remains what got changed locally in global scope as well but let if declared outside function and value changed inside, then it does not impact the value globally.
+	if var is defined inside function, you can access it globally, but if let is defined locally in function then you cannot access it outside scope
+	const does not allow you to reassign a variable again, use the variable name in all caps as standard(it heps remembering that this variable value should not be changed)
+	we cannot change the array if defined using const, but we can change items individualy like a[0]=4, etc..
+	If you do not want the const value to be changes then use Object.freeze(variable name)
 
+8. Functions changes - If we have function which is assigned to a variable then we can convert that function to arrow - 
+	var magic = function() {
+		return new Date();
+	};
+	Can be changed to
+	var magic = () => {
+  		return new Date();
+	};
+	can be changed to next if we only have one return statement
+	var magic = () => new Date();
+	or like below (new)
+	var myConcat = (arr1, arr2) => arr1.concat(arr2);
 
 
