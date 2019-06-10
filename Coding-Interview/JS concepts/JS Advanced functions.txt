@@ -1,4 +1,4 @@
-Array
+--------------Array----------------
 
 const arr1 = ['a', 'b', 'c', 'x'];
 const arr2 = ['m', 'n', 'x', 'y', 'r'];
@@ -43,4 +43,84 @@ const arr2 = ['m', 'n', 'x', 'y', 'r'];
 	or like below (new)
 	var myConcat = (arr1, arr2) => arr1.concat(arr2);
 
+9. Default parmeter - Here even if you do not pass 2nd parameter, function takes care of it
+	const increment = (number, value=10) => {
+		return number + value;
+	};
+	console.log(increment(5, 2)); 
+	console.log(increment(5));
 
+10. Rest operator with function parameter (...args), e.g.
+	const sum = (...args) => {
+    	return args.reduce((a, b) => a + b, 0);
+  	};
+	console.log(sum(1, 2, 3, 4, 5));
+
+11. Spread Operator - When we have two arrays where one array is defined with some values and another array is defined as arr2 = arr1, reference is created and if any change is done to arr2, change happens in arr1, to overcome this use spread operator like below - 
+	arr2 = [...arr1];
+
+-------------Destructuring Assignment------------
+
+a. 	var voxel = {x: 3.6, y: 7.4, z: 6.54 };
+	we can assign the values x, y, z to a, b, c like - 
+	const { x : a, y : b, z : c } = voxel;
+
+b. 	const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }};
+  const { tomorrow : { max : maxOfTomorrow }} = forecast; 
+
+c.  const [z,x] = [1,2,3,4,5,6];
+	z will be 1 and x will be 2, if we want to make y to be 5, then
+	const [z,x,,,y]=[1,2,3,4,5,6];
+
+d. 	let a=8, b=6;
+	we can use [a,b]=[b,a], to interchange values
+
+e.  to not populate 1st two elements but still copy the rest of the elements of the array
+	const source = [1,2,3,4,5,6,7,8,9,10];
+	function removeFirstTwo(list) {
+		const [ , , ...arr] = list; 
+		return arr;
+	}
+	const arr = removeFirstTwo(source);
+
+f. 	to pass not the whole object, instead only specific values, just pass the object, but the function will take 	{ keys needed here}, e.g.
+	const stats = {  max: 56.78,  standard_deviation: 4.34,  median: 34.54,  mode: 23.87,  min: -0.75,  average: 35.85};
+	if we need just max and average do as below
+	calling - half(stats)
+	function - function half({ max, average })
+
+
+-----------------Tempelate Literals-----------------
+
+const person = { name: "Zodiac Hasbro", age: 56 };
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+this makes the next line also incorporated
+
+-----------------Object Literals-----------------
+Earlier way
+const createPerson = (name, age, gender) => {
+  return { name: name, age: age, gender: gender };
+};
+console.log(createPerson("Zodiac Hasbro", 56, "male")); 
+
+New Way
+const createPerson = (name, age, gender) => ({ name, age, gender});
+console.log(createPerson("Zodiac Hasbro", 56, "male")); 
+
+
+------------------Declarative Functions--------------
+Earlier Way
+const bicycle = { gear: 2,
+  setGear: function(newGear) {
+    "use strict";
+    this.gear = newGear;
+  }};
+New Way
+const bicycle = { gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  }};
