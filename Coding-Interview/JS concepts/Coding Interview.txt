@@ -126,14 +126,84 @@ Trie - Each name is stored in a tree data structure, top to bottom
 Sorting algo visual - https://www.toptal.com/developers/sorting-algorithms
 Sorting algo dance - https://www.youtube.com/watch?v=ywWBy6J5gz8
 
+
 Bubble Sort [Best: O(N), Worst:O(N^2)] - (compare side by side and keep shifting) Starting on the left, compare adjacent items and keep “bubbling” the larger one to the right (it’s in its final place). Bubble sort the remaining N -1 items.
+
 Selection Sort [Best/Worst: O(N^2)] - (scan for the smallest and replace at 1st item) Scan all items and find the smallest. Swap it into position as the first item. Repeat the selection sort on the remaining N-1 items.
+
 Insertion Sort [Best: O(N), Worst:O(N^2)] - Start with a sorted list of 1 element on the left, and N-1 unsorted items on the right. Take the first unsorted item (element #2) and insert it into the sorted list, moving elements as necessary. We now have a sorted list of size 2, and N -2 unsorted elements. Repeat for all elements.
+
 Merge Sort [Best: O(nlog(n)), Worst:O(nlog(n))] - Divide each element and do comparision and keep combining
+
 Quick Sort - refer doc, take piveot last and take first adn compare, if first is more then pivot switch places and change pivot to first, now start scan from lastand come forward
+
 Heap Sort - https://www.youtube.com/watch?v=HqPJF2L5h9U - Create a complete binary tree and insert the dat so that it remains complete binary and then swap with parent if the element is greater (max heap case), delete the data from the top head and bring the last element of the complete binary tree and then swap traverssing child so that max element comes to top. While deleting the top element we get the output as sorted array
+Binary Tree
+			A
+	B				C
+D		E		F		G
+
+Array - A,B,C,D,E,F,G
+Index - 1,2,3,4,5,6,7
+
+1. If a node is at index 	i 
+2. left child is at 		2*i
+3. right child is at 		2*i + 1
+4. parent is at 			i/2 (floor value)
+
+Full Binary Tree - number of nodes 2^(h+1) -1 - Binary Tree with full no of nodes is ful binary tree
+Complete Binary Tree - if array do not have missing empty array elemnts in between then complete binary tree
+		A complete binary tree of height h is already a full binary tree upto height h-1
+		
+
+========Heap===========
+Heap is a complete binary tree
+		Min Heap
+			10
+	30				20
+35		40		32		25
+
+		Max Heap
+			50
+	30				20
+15		10		8		16
+
+50,30,20,15,10,8,16
+
+---------Insert 60 in max heap, so insert from last as child of 15-----------
+				50
+		30				20
+	15		10		8		16
+60
+Now 60 will compare with 15, then with 30, then with 50 and swap places
+50,30,20,15,10,8,16,60 - 
+50,30,20,60,10,8,16,15 - 15 and 60 swap
+50,60,20,30,10,8,16,15 - 30 and 60 swap
+60,50,20,30,10,8,16,15 - 50 and 60 swap
+				60
+		50				20
+	30		10		8		16
+15
+Pefect now, time is O(log n) for swapping,  minimum is O(1)
+
+
+----------Delete 50 in max heap, delete from top like apple vendor making a pyramid-----------
+			50
+	30				20
+15		10		8		16
+
+50,30,20,15,10,8,16 - now delete 50 and bring last value of array to top
+16,30,20,15,10,8 - which child is greater, swap with that 30 with 16
+30,16,20,15,10,8 - desendents are okay, done
+TIme - O(log n)
+
+Everytime we remove element from max heap we get largest element, so if we remove all one by one then we get sorted descending array
+
 Radix Sort - This works only on numbers, take the largest from the numbers (for say 105), and make all the other numbers padding 0 in fron to be equal to 3 digits as max number 105, now start comapring from last digit and add them in buckets with 0 to 9, and then pull out them from bottom, same with 2nd place and 1st place and same procedure, in last remove extra padded 0's to see sorted list - https://www.youtube.com/watch?v=YXFI4osELGU
+
 Counting Sort - https://www.youtube.com/watch?v=TTnvXY82dtM
+
+
 
 Quick sort should be used when average case performance matters more then worst performance
 Merge Sort is great and stable as nlogn, only space is higher
