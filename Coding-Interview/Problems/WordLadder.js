@@ -1,6 +1,6 @@
 let beginWord = "hot";
 let endWord = "dog";
-let wordList = ["hot","cog","dog","tot","hog","hop","pot","dot"];
+let wordList = ["hot", "cog", "dog", "tot", "hog", "hop", "pot", "dot"];
 
 
 var ladderLength = function (beginWord, endWord, wordList) {
@@ -30,9 +30,9 @@ var ladderLength = function (beginWord, endWord, wordList) {
 var ladderLength2 = function (beginWord, endWord, wordList) {
     let arr = [beginWord];
     let count = 0;
-    let found = false, i=0;
-    while(found===false) {
-        count=0;
+    let found = false, i = 0;
+    while (found === false) {
+        count = 0;
         for (let j = 0; j < wordList[0].length; j++) {
             //console.log(arr[arr.length - 1][j], endWord.charAt(j));
             if (arr[arr.length - 1][j] === endWord.charAt(j)) {
@@ -40,11 +40,11 @@ var ladderLength2 = function (beginWord, endWord, wordList) {
                 count++;
             }
         }
-        if(count===1 && wordList.includes(endWord)) {
+        if (count === 1 && wordList.includes(endWord)) {
             arr.push(endWord);
-            found=true;
+            found = true;
         } else {
-            count=0;
+            count = 0;
             for (let j = 0; j < wordList[0].length; j++) {
                 if (arr[arr.length - 1][j] === wordList[i][j]) {
                 } else {
@@ -53,17 +53,17 @@ var ladderLength2 = function (beginWord, endWord, wordList) {
             }
             if (count == 1 && !arr.includes(wordList[i])) {
                 arr.push(wordList[i]);
-                i=0;
-                if(arr[arr.length - 1] === endWord) {
-                    found=true;
+                i = 0;
+                if (arr[arr.length - 1] === endWord) {
+                    found = true;
                 }
             } else {
                 i++;
-                if(i===wordList.length) {
+                if (i === wordList.length) {
                     return 0;
                 }
             }
-        }        
+        }
         console.log(i, count, arr, found);
     }
     if (arr[arr.length - 1] === endWord) {
@@ -73,4 +73,22 @@ var ladderLength2 = function (beginWord, endWord, wordList) {
     }
 };
 
-ladderLength2(beginWord, endWord, wordList);
+var ladderLength3 = function (beginWord, endWord, wordList) {
+    class Node {
+        constructor(value) {
+            this.head = {
+                value: value,
+                begin: null,
+                end: null,
+                next: null
+            }
+            this.tail = this.head;
+            this.length = 1
+        }
+    }
+    for(let i=0; i<wordList.length; i++) {
+        
+    }
+    const linkList = new Node()
+};
+//ladderLength2(beginWord, endWord, wordList);
