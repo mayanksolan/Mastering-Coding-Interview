@@ -128,4 +128,20 @@ var insert = function(intervals, newInterval) {
     return intervals;
 };
 
-insert(intervals, newInterval);
+var insert1 = function(intervals, newInterval) {
+    let newInt = [];
+    for(let i=0; i<intervals.length; i++) {
+        if(intervals[i][1] < newInterval[0]) {
+            newInt.push(intervals[i])
+        } else if(intervals[i][0] > newInterval[0]) {
+            newInt.push(newInterval);
+            newInterval = intervals[i];
+        } else if(intervals[i][1] >= newInterval[0] || intervals[i][0] <= newInterval[0]) {
+            newInterval = [Math.min(intervals[i][0], newInterval[0]), Math.max(newInterval[1], intervals[i][1])];
+        }
+    }
+    newInt.push(newInterval);
+    return newInt
+};
+
+insert1(intervals, newInterval);
