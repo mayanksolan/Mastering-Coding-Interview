@@ -1,4 +1,5 @@
-const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+const arr = [100, 200, 300, 400];
+//[-2, 1, -3, 4, -1, 2, 1, -5, 4];
 
 function maxSubarraySum(arr, num) {
   let maxSum = 0;
@@ -16,4 +17,4 @@ function maxSubarraySum(arr, num) {
   return maxSum;
 }
 
-maxSubarraySum(arr, 3);
+maxSubarraySum(arr, 2);
